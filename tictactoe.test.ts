@@ -30,5 +30,14 @@ test('Put an X in the middle', async () => {
 test('Put an X in bottom right for Kill', async () => {
     let righty = await driver.findElement(By.id('cell-8'));
     await righty.click();
+});
+
+test('Block the O', async () => {
+    let top = await driver.findElement(By.id('cell-0'));
+    await top.click();
+    let right = await driver.findElement(By.id('cell-2'));
+    await right.click();
+    let middle2 = await driver.findElement(By.id('cell-4'));
+    await middle2.click();
     await driver.sleep(4000);
 });
